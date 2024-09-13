@@ -1,7 +1,7 @@
 SELECT *
 FROM customer_churn;
 
--- create new table to do analysis on
+-- create new table to perform analysis 
 CREATE TABLE customer_churn2
 LIKE customer_churn;
 
