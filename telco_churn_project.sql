@@ -143,19 +143,19 @@ counttable;
 WITH percent_senior_churned AS (
 	SELECT 
 		ROUND(senior_citizen_churned / total_senior_citizen * 100, 2) as percent_senior_churned FROM(
-		SELECT 
-			SUM(CASE WHEN seniorcitizen = 1 AND churn = 'Yes' THEN 1 END) senior_citizen_churned,
-			COUNT(CASE WHEN seniorcitizen = 1 THEN 1 END) total_senior_citizen
-			FROM customer_churn2) 
+	SELECT 
+		SUM(CASE WHEN seniorcitizen = 1 AND churn = 'Yes' THEN 1 END) senior_citizen_churned,
+		COUNT(CASE WHEN seniorcitizen = 1 THEN 1 END) total_senior_citizen
+		FROM customer_churn2) 
         AS counttable
 ),
 percent_non_senior_churned AS (
 	SELECT 
 		ROUND(non_senior_citizen_churned / total_non_senior_citizen * 100, 2) as percent_non_senior_churned FROM(
-		SELECT 
-			SUM(CASE WHEN seniorcitizen = 0 AND churn = 'Yes' THEN 1 END) non_senior_citizen_churned,
-			COUNT(CASE WHEN seniorcitizen = 0 THEN 1 END) total_non_senior_citizen
-			FROM customer_churn2) 
+	SELECT 
+		SUM(CASE WHEN seniorcitizen = 0 AND churn = 'Yes' THEN 1 END) non_senior_citizen_churned,
+		COUNT(CASE WHEN seniorcitizen = 0 THEN 1 END) total_non_senior_citizen
+		FROM customer_churn2) 
         AS counttable
 )
 SELECT 
