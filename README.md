@@ -34,8 +34,8 @@ This project involves analyzing customer churn data to understand patterns and f
 
 ### 5. **Tableau Dashboard**
 
-- **Objective:** To create a Tableau dashboard that visually represents churn rates, customer segments, and contract types.
-- **Features:** Interactive filters, charts, and graphs to allow users to explore churn patterns and factors affecting customer retention.
+- **Objective:** Tableau dashboard that visually represents churn rates, customer segments, and contract types.
+- **Features:** Interactive charts and graphs to allow users to explore churn patterns and factors affecting customer retention.
 
 ## Findings
 
